@@ -1,0 +1,12 @@
+name: f14a
+on:
+  workflow_dispatch: {}
+jobs:
+  u:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo x > payload.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          name: ".."
+          path: payload.txt
